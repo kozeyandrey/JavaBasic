@@ -1,14 +1,18 @@
 package com.company;
 
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 
 public class Main {
-    public static void main(String[] args) {
-        System.out.println("Enter first number:");
-        Scanner scan = new Scanner(System.in);
-        int num1 = scan.nextInt();
-        System.out.println("Enter second number:");
-        int num2 = scan.nextInt();
-        System.out.println("Sum is " + (num1 + num2));
+    public static void main(String[] args) throws IOException {
+        FileReader file = new FileReader("hello");
+        BufferedReader reader = new BufferedReader(file);
+        String data;
+        while ((data = reader.readLine()) != null) {
+            System.out.println(data);
+        }
+        reader.close();
     }
 }
