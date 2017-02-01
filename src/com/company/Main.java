@@ -2,13 +2,14 @@ package com.company;
 
 public class Main {
     public static void main(String[] args) {
-        String[] breakfast = new String[3];
-        breakfast[0] = "Bacon";
-        breakfast[1] = "Eggs";
-        breakfast[2] = "Toast";
-
-        for (int i = 0; i < breakfast.length; i++) {
-            System.out.println(breakfast[i]);
+        if (1 == 0 && 1 == 1) {
+            System.out.println("statement is true");
+        }
+        else if (0==0) {
+            System.out.println("statement is false, else if statement is true");
+        }
+        else {
+            System.out.println("statement is false");
         }
 	}
 }
